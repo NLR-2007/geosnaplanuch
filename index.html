@@ -38,6 +38,13 @@
 }
 
 * { box-sizing: border-box; }
+
+/* The browser's own [hidden] rule is a plain `display: none`, so any class
+   that sets a display of its own outranks it and the element stays on
+   screen. Both the button and the announcement set one, which showed every
+   state of the page at once. */
+[hidden] { display: none !important; }
+
 html, body { height: 100%; }
 body {
   margin: 0;
